@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bottom" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="607.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="600.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Line endX="159.0" endY="398.0" fill="WHITE" layoutX="300.0" layoutY="180.0" startX="159.0" startY="-148.0" stroke="WHITE" strokeDashOffset="10.2" strokeLineCap="BUTT" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="3.0" style="-fx-stroke-dash-array: 7;" />
+      <Rectangle fx:id="playerPaddle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="121.0" layoutX="14.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="13.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.379710853099823" green="0.7236841917037964" blue="0.2077241688966751" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Rectangle>
+      <Rectangle fx:id="enemyPaddle" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="121.0" layoutX="857.0" layoutY="255.0" stroke="BLACK" strokeType="INSIDE" width="13.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant>
+                     <color>
+                        <Color red="0.7631579041481018" green="0.20492202043533325" blue="0.20492202043533325" />
+                     </color>
+                  </Light.Distant>
+               </light>
+            </Lighting>
+         </effect>
+      </Rectangle>
+      <Label fx:id="playerPoint" layoutX="350.0" layoutY="19.0" prefHeight="60.0" prefWidth="69.0" text="00" textFill="WHITE">
+         <font>
+            <Font name="Engravers MT" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="enemyPoint" layoutX="505.0" layoutY="19.0" prefHeight="60.0" prefWidth="69.0" text="00" textFill="WHITE">
+         <font>
+            <Font name="Engravers MT" size="50.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="bottomWall" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="12.0" layoutY="601.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Rectangle fx:id="topWall" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="12.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="900.0" />
+      <Circle fx:id="ball" layoutX="459.0" layoutY="304.0" radius="13.0" stroke="WHITE" strokeType="INSIDE" />
+   </children>
+</AnchorPane>
